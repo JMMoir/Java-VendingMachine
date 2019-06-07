@@ -1,4 +1,4 @@
-package Drawer;
+package VendingMachine.Product.Drawer;
 
 public enum DrawerType {
 

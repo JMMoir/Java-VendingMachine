@@ -1,4 +1,4 @@
-package Coin;
+package VendingMachine.Product.Coin;
 
 public enum CoinEnum {
 

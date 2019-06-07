@@ -1,4 +1,4 @@
-import Product.Product;
+import VendingMachine.Product.Product;
 import org.junit.Before;
 import org.junit.Test;
 

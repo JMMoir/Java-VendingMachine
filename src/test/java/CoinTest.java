@@ -1,5 +1,5 @@
-import Coin.Coin;
-import Coin.CoinEnum;
+import VendingMachine.Product.Coin.Coin;
+import VendingMachine.Product.Coin.CoinEnum;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -1,6 +1,6 @@
-package Drawer;
+package VendingMachine.Product.Drawer;
 
-import Product.Product;
+import VendingMachine.Product.Product;
 
 public class Drawer {
 

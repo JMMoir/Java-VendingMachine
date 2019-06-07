@@ -1,4 +1,4 @@
-package Product;
+package VendingMachine.Product;
 
 public class Product {
 

@@ -1,6 +1,6 @@
-import Drawer.Drawer;
-import Drawer.DrawerType;
-import Product.Product;
+import VendingMachine.Product.Drawer.Drawer;
+import VendingMachine.Product.Drawer.DrawerType;
+import VendingMachine.Product.Product;
 import org.junit.Before;
 import org.junit.Test;
 
