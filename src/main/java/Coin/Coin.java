@@ -11,4 +11,8 @@ public class Coin {
     public int getValue(){
         return coin.getCoinValue();
     }
+
+    public boolean getValidStatus() {
+        return coin.getValid();
+    }
 }

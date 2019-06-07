@@ -3,7 +3,7 @@ import Coin.CoinEnum;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class CoinTest {
 
@@ -18,5 +18,16 @@ public class CoinTest {
     @Test
     public void hasValue() {
         assertEquals(20, coin.getValue());
+    }
+
+    @Test
+    public void hasValidityTrue() {
+        assertTrue(coin.getValidStatus());
+    }
+
+    @Test
+    public void hasValidityFalse() {
+        Coin coin = new Coin(CoinEnum.ONE);
+        assertFalse(coin.getValidStatus());
     }
 }
