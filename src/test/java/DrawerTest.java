@@ -1,5 +1,5 @@
-import VendingMachine.Product.Drawer.Drawer;
-import VendingMachine.Product.Drawer.DrawerType;
+import VendingMachine.Drawer.Drawer;
+import VendingMachine.Drawer.DrawerType;
 import VendingMachine.Product.Product;
 import org.junit.Before;
 import org.junit.Test;

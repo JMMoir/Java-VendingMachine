@@ -1,16 +1,18 @@
-package VendingMachine.Product;
+package VendingMachine;
+import VendingMachine.Coin.Coin;
+import VendingMachine.Drawer.Drawer;
 
-import VendingMachine.Product.Drawer.Drawer;
-
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class VendingMachine {
 
     private ArrayList<Drawer> drawers;
+    private ArrayList<Coin> cashBox;
 
-
-    public VendingMachine(ArrayList<Drawer> drawers) {
+    public VendingMachine(ArrayList<Drawer> drawers, ArrayList<Coin> cashBox) {
         this.drawers = drawers;
+        this.cashBox = cashBox;
     }
 
     public int getNumberOfDrawers(){
@@ -30,4 +32,14 @@ public class VendingMachine {
         }
         return cost;
     }
+
+    public int countCoinsInCashBox(){
+        int total = 0;
+        for(Coin coin: cashBox){
+            total += coin.getValue();
+        }
+        return total;
+    }
+
+
 }

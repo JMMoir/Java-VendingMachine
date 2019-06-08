@@ -1,7 +1,8 @@
-import VendingMachine.Product.Drawer.Drawer;
-import VendingMachine.Product.Drawer.DrawerType;
+import VendingMachine.Coin.Coin;
+import VendingMachine.Drawer.Drawer;
+import VendingMachine.Drawer.DrawerType;
 import VendingMachine.Product.Product;
-import VendingMachine.Product.VendingMachine;
+import VendingMachine.VendingMachine;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -19,7 +20,8 @@ public class VendingMachineTest {
 
     public void setUp() {
         ArrayList<Drawer> drawers = new ArrayList<Drawer>();
-        vendingMachine = new VendingMachine(drawers);
+        ArrayList<Coin> cashBox = new ArrayList<Coin>();
+        vendingMachine = new VendingMachine(drawers, cashBox);
         Product product = new Product("Cola", 100);
         Product product2 = new Product("Crisps", 65);
         Drawer drawer = new Drawer(DrawerType.A1, product);
@@ -37,4 +39,11 @@ public class VendingMachineTest {
     public void canGetCostOfProduct() {
         assertEquals(65, vendingMachine.getProductCost("A2"));
     }
+
+    @Test
+    public void canCountCoins() {
+        assertEquals(0, vendingMachine.countCoinsInCashBox());
+    }
+
+
 }

@@ -1,4 +1,4 @@
-package VendingMachine.Product.Drawer;
+package VendingMachine.Drawer;
 
 import VendingMachine.Product.Product;
 
