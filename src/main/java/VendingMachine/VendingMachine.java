@@ -42,4 +42,7 @@ public class VendingMachine {
     }
 
 
+    public void insertCoin(Coin coin) {
+        cashBox.add(coin);
+    }
 }

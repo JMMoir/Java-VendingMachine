@@ -1,4 +1,5 @@
 import VendingMachine.Coin.Coin;
+import VendingMachine.Coin.CoinEnum;
 import VendingMachine.Drawer.Drawer;
 import VendingMachine.Drawer.DrawerType;
 import VendingMachine.Product.Product;
@@ -15,6 +16,9 @@ public class VendingMachineTest {
 
     private VendingMachine vendingMachine;
     private ArrayList<Drawer> drawers;
+    private Coin coin;
+    private Coin coin2;
+
 
     @Before
 
@@ -28,6 +32,8 @@ public class VendingMachineTest {
         Drawer drawer2 = new Drawer(DrawerType.A2, product2);
         vendingMachine.addDrawersToMachine(drawer);
         vendingMachine.addDrawersToMachine(drawer2);
+        coin = new Coin(CoinEnum.TWENTY);
+        coin2 = new Coin(CoinEnum.FIFTY);
     }
 
     @Test
@@ -45,5 +51,10 @@ public class VendingMachineTest {
         assertEquals(0, vendingMachine.countCoinsInCashBox());
     }
 
-
+    @Test
+    public void CanAddCoinsToCashBox() {
+        vendingMachine.insertCoin(coin);
+        vendingMachine.insertCoin(coin2);
+        assertEquals(70, vendingMachine.countCoinsInCashBox());
+    }
 }
