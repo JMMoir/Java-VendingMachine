@@ -57,4 +57,19 @@ public class VendingMachineTest {
         vendingMachine.insertCoin(coin2);
         assertEquals(70, vendingMachine.countCoinsInCashBox());
     }
+
+    @Test
+    public void canFindProductByCode() {
+        Product foundProduct = vendingMachine.getPoductByCode("A2");
+        String foundProductName = foundProduct.getName();
+        assertEquals("Crisps", foundProductName);
+    }
+
+    @Test
+    public void canBuyProduct() {
+        vendingMachine.insertCoin(coin);
+        vendingMachine.insertCoin(coin2);
+        Product foundProduct = vendingMachine.getPoductByCode("A2");
+        assertEquals(vendingMachine.buyProduct("A2"), foundProduct);
+    }
 }

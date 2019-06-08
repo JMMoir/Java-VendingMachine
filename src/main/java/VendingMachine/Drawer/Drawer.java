@@ -24,4 +24,8 @@ public class Drawer {
     public int getProductCost(){
         return product.getCost();
     }
+
+    public Product getProduct(){
+        return product;
+    }
 }
